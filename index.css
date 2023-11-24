@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+
+}
+:root {
+    --x: 50%;
+    --y: 50%;
+
+    --TiltX : 0deg;
+    --TiltY : 0deg;
+}
+
+.body-container {
+    width: 100vw;
+    height: 100vh;
+    background: #0F0F0F;
+    
+
+    display: grid;
+    place-items: center;
+
+
+}
+
+
+.text-container {
+    width: 70vh;
+    height: 70vh;
+    background: #232D3F;
+    border-radius: 15px;
+
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+
+    overflow: hidden;
+
+    color: #fff;
+
+    font-size: 0.8rem;
+
+    -webkit-mask-image: radial-gradient(circle at var(--x) var(--y), transparent 10%, black 100%);
+
+    transform: perspective(1000px) rotateX(var(--TiltX)) rotateY(var(--TiltY));
+    transition: transform 0.2s ease-out;  
+
+}
+
+
